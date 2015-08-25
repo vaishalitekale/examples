@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS Examples</title>
+		<link rel="stylesheet" type="text/css" href="custom.css">
+		<script src="angular-min.js"></script>
+		<script src="custom.js"></script>
+	</head>
+	<body ng-controller="searchCtrl">
+		<input type="text" ng-model="search">
+		{{search}}
+		<ul>
+			<li ng-repeat="list in list_arr | filter : search">
+				{{list}}
+			</li>
+		</ul>
+	</body>
+</html>
